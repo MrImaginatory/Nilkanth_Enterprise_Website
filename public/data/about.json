@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "tag": "Our Story",
+    "title": "Crafting Comfort Since 2024",
+    "sub": "Nilkanth Enterprises was born out of a desire for furniture that doesn't just fill a space, but tells a story of craftsmanship and durability.",
+    "bgImage": "/about/images/about_hero.webp"
+  },
+  "philosophy": {
+    "title": "The Artisan Approach",
+    "paragraphs": [
+      "We believe that every piece of wood has a soul. Our master craftsmen spend hundreds of hours selecting the finest teak, curing it to perfection, and hand-finishing every joint.",
+      "While the world moves toward mass-produced, temporary furniture, we stand firm on our promise of lifelong durability and 100% custom designs."
+    ],
+    "values": [
+      {
+        "id": "01",
+        "label": "Purity of Wood"
+      },
+      {
+        "id": "02",
+        "label": "Direct Transparency"
+      },
+      {
+        "id": "03",
+        "label": "Lifetime Service"
+      }
+    ],
+    "image": "/about/images/about_hero.webp"
+  },
+  "timeline": {
+    "header": {
+      "title": "Our Growth Journey",
+      "sub": "A vision of excellence, rapidly expanding to serve you better."
+    },
+    "events": [
+      {
+        "date": "17 Sep 2024",
+        "title": "Songadh Branch",
+        "desc": "Our journey began with the flagship showroom in Songadh, bringing premium custom furniture to the local community.",
+        "icon": "HiOutlineBuildingStorefront"
+      },
+      {
+        "date": "10 Aug 2025",
+        "title": "Nilkanth Factory Foundation",
+        "desc": "To ensure 100% quality control, we established our own manufacturing unit, transitioning from a retailer to a factory-first brand.",
+        "icon": "HiOutlineCpuChip"
+      },
+      {
+        "date": "22 Jan 2026",
+        "title": "Vyara Branch Expansion",
+        "desc": "Responding to high demand, we opened our second major outlet in Vyara, specializing in luxury living and dining collections.",
+        "icon": "HiOutlineCube"
+      },
+      {
+        "date": "18 Feb 2026",
+        "title": "Bardoli Branch Launch",
+        "desc": "Our most recent expansion into Bardoli, featuring a massive experience center for complete home renovations.",
+        "icon": "HiOutlineUserGroup"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Experience the Craft First-Hand",
+    "text": "Visit our factory in Vyara to see how your furniture is made. From raw timber to polished perfection.",
+    "buttonText": "Schedule a Factory Visit"
+  }
+}

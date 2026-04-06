@@ -1,0 +1,296 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.bgLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.bgImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% center;
+  transform: scale(1.05);
+  animation: var(--animate-slow-zoom);
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, var(--color-cream), rgba(255, 253, 250, 0.8), transparent);
+  z-index: 10;
+}
+
+@media (min-width: 1024px) {
+  .scrim {
+    background: linear-gradient(to right, var(--color-cream), rgba(255, 253, 250, 0.6), transparent);
+  }
+}
+
+.mobileBottomFade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--color-cream), transparent, transparent);
+  z-index: 15;
+}
+
+@media (min-width: 1024px) {
+  .mobileBottomFade {
+    display: none;
+  }
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 20;
+  padding-top: 8rem;
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .contentWrapper {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contentWrapper {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+.innerContent {
+  max-width: 80rem; /* 5xl equivalent */
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(93, 64, 55, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(93, 64, 55, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  margin-bottom: 2rem;
+  animation: var(--animate-fade-in-up);
+}
+
+.badgeDot {
+  display: flex;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--color-warm-amber);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .5; }
+}
+
+.badgeText {
+  font-size: 0.875rem;
+  font-weight: 900;
+  color: var(--color-wood-brown);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.h1 {
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: var(--color-wood-brown);
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  letter-spacing: -0.05em;
+  max-width: 48rem;
+  animation: var(--animate-fade-in-up);
+  animation-delay: 100ms;
+}
+
+@media (min-width: 768px) {
+  .h1 { font-size: 3.75rem; }
+}
+
+@media (min-width: 1024px) {
+  .h1 { font-size: 4.5rem; }
+}
+
+.h1Highlight {
+  color: var(--color-warm-amber-dark);
+  display: block;
+  margin-top: 0.5rem;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.05));
+}
+
+.subheadline {
+  font-size: 1.125rem;
+  color: rgba(33, 33, 33, 0.9);
+  margin-bottom: 3rem;
+  line-height: 1.625;
+  max-width: 42rem;
+  font-weight: 600;
+  animation: var(--animate-fade-in-up);
+  animation-delay: 200ms;
+}
+
+@media (min-width: 768px) {
+  .subheadline { font-size: 1.25rem; }
+}
+
+.ctas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 3.5rem;
+  animation: var(--animate-fade-in-up);
+  animation-delay: 300ms;
+}
+
+@media (min-width: 640px) {
+  .ctas {
+    flex-direction: row;
+  }
+}
+
+.primaryBtn {
+  width: 100%;
+  background: linear-gradient(to bottom right, var(--color-forest-green), var(--color-forest-green-dark));
+  color: white;
+  box-shadow: 0 20px 40px -10px rgba(46, 125, 50, 0.3);
+  transition: all 300ms;
+}
+
+@media (min-width: 640px) {
+  .primaryBtn { width: auto; }
+}
+
+.primaryBtn:hover {
+  box-shadow: 0 25px 50px -12px rgba(46, 125, 50, 0.4);
+  transform: translateY(-4px);
+}
+
+.secondaryBtn {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(93, 64, 55, 0.2);
+  color: var(--color-wood-brown);
+  transition: all 300ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .secondaryBtn { width: auto; }
+}
+
+.secondaryBtn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+}
+
+.whatsappIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.75rem;
+  color: var(--color-forest-green);
+  transition: transform 300ms;
+}
+
+.secondaryBtn:hover .whatsappIcon {
+  transform: scale(1.1);
+}
+
+.trustSignals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(93, 64, 55, 0.1);
+  animation: var(--animate-fade-in-up);
+  animation-delay: 500ms;
+}
+
+.signalItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.signalLabel {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--color-wood-brown);
+  letter-spacing: -0.025em;
+}
+
+.signalSub {
+  font-size: 0.75rem;
+  color: var(--color-neutral-500);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.floatingBadge {
+  position: absolute;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  display: none;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  padding: 1.25rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  animation: var(--animate-float);
+}
+
+@media (min-width: 1280px) {
+  .floatingBadge {
+    display: flex;
+  }
+}
+
+.checkIconWrapper {
+  background-color: var(--color-warm-amber);
+  color: white;
+  padding: 0.75rem;
+  border-radius: 1rem;
+}
+
+.badgeContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.badgeTitle {
+  font-size: 0.875rem;
+  font-weight: 900;
+  color: var(--color-wood-brown);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badgeSub {
+  font-size: 0.75rem;
+  color: var(--color-neutral-500);
+  font-weight: 700;
+}

@@ -1,0 +1,79 @@
+{
+  "hero": {
+    "tag": "Our Services",
+    "title": "Complete Custom Interiors",
+    "sub": "From 100% teak furniture to luxury sofa design and full office renovations, we bring artisan quality to every corner of your space.",
+    "bgImage": "/services/images/services_hero.webp"
+  },
+  "services": [
+    {
+      "id": "sofa-design",
+      "title": "Bespoke Sofa & Luxury Seating",
+      "image": "/projects/images/heritage_restoration.webp",
+      "shortDesc": "Custom upholstery, premium foams, and luxury fabrics designed for ultimate comfort.",
+      "longDesc": "We specialize in creating sofas that are more than just furniture—they are centerpieces. Using 32-40 density high-resilience foam and premium wooden frames, we ensure your seating lasts decades without losing its shape or comfort. Choose from over 500+ premium fabric options, from Italian velvet to durable linen.",
+      "icon": "HiOutlineSparkles",
+      "features": [
+        "40 Density HR Foam (Standard)",
+        "Lifetime Frame Warranty",
+        "Designer Fabric Selection",
+        "Custom Sizing for Your Space"
+      ],
+      "process": [
+        "Consultation",
+        "Material Selection",
+        "Frame Building",
+        "Upholstery",
+        "Delivery"
+      ]
+    },
+    {
+      "id": "teak-furniture",
+      "title": "Premium Teak Wood Creations",
+      "image": "/projects/images/luxury_villa_interior.webp",
+      "shortDesc": "Authentic wood joinery for dining, bedroom, and living spaces.",
+      "longDesc": "Our heritage lies in working with 100% pure teak wood. Unlike factory-made assembly line products, our pieces use traditional mortise and tenon joinery. Every dining table, bed frame, and wardrobe is built to be a family heirloom, cured to withstand coastal humidity and varying temperatures.",
+      "icon": "HiOutlinePuzzlePiece",
+      "features": [
+        "100% Cured Teak Wood",
+        "No Plywood/MDF Shortcuts",
+        "Hand-Polished Finish",
+        "Termite Resistant Guarantee"
+      ],
+      "process": [
+        "Wood Selection",
+        "Precision Cutting",
+        "Joinery",
+        "Polishing",
+        "Curing"
+      ]
+    },
+    {
+      "id": "office-renovations",
+      "title": "Commercial & Office Interiors",
+      "image": "/projects/images/modern_executive_office.webp",
+      "shortDesc": "Functional, aesthetic workspace transformations for maximum productivity.",
+      "longDesc": "Transform your business environment with ergonomic office furniture and modern layout designs. We provide complete turnkey solutions from reception desks to executive cabins and collaborative workstations. Scalability and durability are at the heart of our office designs, ensuring your professional space grows with you.",
+      "icon": "HiOutlineBuildingOffice2",
+      "features": [
+        "Ergonomic Design Focus",
+        "Space Optimization Layouts",
+        "Heavy-Duty Hardware",
+        "Turnkey Project Management"
+      ],
+      "process": [
+        "Site Analysis",
+        "3D Layout Planning",
+        "Manufacturing",
+        "Installation",
+        "Final Touch"
+      ]
+    }
+  ],
+  "trustBanner": {
+    "title": "Ready to Start Your Project?",
+    "desc": "Join 10,000+ happy families who have transformed their homes with Nilkanth Enterprises.",
+    "primaryCTA": "Get a Free Quote",
+    "secondaryCTA": "Chat on WhatsApp"
+  }
+}

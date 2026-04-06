@@ -1,0 +1,57 @@
+.section {
+  width: 100%;
+}
+
+/* Backgrounds */
+.cream {
+  background-color: var(--color-cream);
+}
+
+.white {
+  background-color: var(--color-white, #ffffff);
+}
+
+.creamDark {
+  background-color: var(--color-cream-dark);
+}
+
+.woodBrown {
+  background-color: var(--color-wood-brown);
+  color: white;
+}
+
+.forestGreen {
+  background-color: var(--color-forest-green);
+  color: white;
+}
+
+/* Padding Vertical */
+.sm {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.md {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.lg {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+@media (min-width: 768px) {
+  .sm {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .md {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  .lg {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}

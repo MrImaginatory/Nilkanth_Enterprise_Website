@@ -1,0 +1,303 @@
+.pageWrapper {
+  background-color: var(--color-cream);
+  min-height: 100vh;
+}
+
+.hero {
+  background-color: var(--color-wood-brown-dark);
+  background-image: linear-gradient(rgba(10, 8, 5, 0.7), rgba(10, 8, 5, 0.7)), url('/assets/services_hero.webp');
+  background-size: cover;
+  background-position: center;
+  padding: 10rem 0 8rem;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 50vh;
+
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 50% 50%, rgba(255, 179, 0, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.heroTag {
+  color: var(--color-warm-amber);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-weight: 900;
+  font-size: 0.875rem;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .heroTitle {
+    font-size: 4.5rem;
+  }
+}
+
+.heroSub {
+  font-size: 1.125rem;
+  color: rgba(255, 253, 250, 0.7);
+  max-width: 42rem;
+  margin: 0 auto;
+  line-height: 1.625;
+}
+
+.servicesList {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  margin-top: 4rem;
+}
+
+.serviceItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-bottom: 8rem;
+  margin-bottom: 8rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.serviceItem:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+@media (min-width: 1024px) {
+  .serviceItem {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .serviceItem.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+.serviceImageSide {
+  flex: 1;
+}
+
+.imageWrapper {
+  position: relative;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.15);
+  aspect-ratio: 4 / 3;
+}
+
+.serviceImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.serviceItem:hover .serviceImage {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 8, 5, 0.4), transparent);
+  opacity: 0.6;
+}
+
+.iconBadge {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: white;
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-warm-amber);
+  font-size: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+}
+
+.serviceMainContent {
+  flex: 1;
+}
+
+.serviceTitle {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--color-wood-brown-dark);
+  margin-bottom: 1rem;
+}
+
+.serviceShort {
+  font-size: 1.25rem;
+  color: var(--color-wood-brown);
+  font-family: var(--font-serif);
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.serviceLongDesc {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--color-neutral-600);
+  margin-bottom: 3rem;
+  max-width: 50rem;
+}
+
+.detailsGrid {
+  display: grid;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .detailsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.detailHeading {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--color-wood-brown);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.featureList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.featureList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--color-neutral-700);
+  font-weight: 500;
+}
+
+.checkIcon {
+  color: var(--color-forest-green);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.processSteps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stepNum {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--color-warm-amber-light);
+  color: var(--color-wood-brown-dark);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 0.875rem;
+}
+
+.stepText {
+  font-weight: 700;
+  color: var(--color-wood-brown);
+}
+
+.stepArrow {
+  color: var(--color-neutral-300);
+}
+
+.serviceCTA {
+  margin-top: 2rem;
+}
+
+.trustBanner {
+  background-color: var(--color-wood-brown-dark);
+  padding: 4rem;
+  border-radius: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .trustBanner {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.trustText {
+  max-width: 32rem;
+}
+
+.trustTitle {
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.trustDesc {
+  color: rgba(255, 253, 250, 0.6);
+  font-size: 1.125rem;
+}
+
+.trustActions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bannerBtn {
+  min-width: 12rem;
+}
+
+.bannerBtnWhite {
+  border-color: white;
+  color: white;
+  min-width: 12rem;
+}
+
+.bannerBtnWhite:hover {
+  background-color: white;
+  color: var(--color-wood-brown-dark);
+}

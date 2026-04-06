@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "tag": "Our Portfolio",
+    "title": "Masterpieces in Wood",
+    "sub": "A showcase of bespoke projects delivered to premium residences and commercial spaces across Gujarat.",
+    "bgImage": "/projects/images/res_villa.webp"
+  },
+  "projects": [
+    {
+      "id": "p1",
+      "title": "Luxury Villa Interior",
+      "category": "Residential",
+      "location": "Songadh",
+      "image": "/projects/images/luxury_villa_interior.webp",
+      "description": "Full home furniture set featuring hand-carved teak sofas, a minimalist dining suite, and bespoke bedroom wardrobes.",
+      "tags": [
+        "Teak Wood",
+        "Hand-Carved",
+        "Premium Polish"
+      ]
+    },
+    {
+      "id": "p2",
+      "title": "Modern Executive Office",
+      "category": "Commercial",
+      "location": "Vyara",
+      "image": "/projects/images/modern_executive_office.webp",
+      "description": "Custom-designed ergonomic workspace with solid wood desks and integrated cable management systems.",
+      "tags": [
+        "Ergonomic",
+        "Solid Wood",
+        "Commercial Grade"
+      ]
+    },
+    {
+      "id": "p3",
+      "title": "Boutique Cafe Setup",
+      "category": "Hospitality",
+      "location": "Bardoli",
+      "image": "/projects/images/boutique_cafe_setup.webp",
+      "description": "Rustic-modern seating solutions including artisan benches and live-edge coffee tables.",
+      "tags": [
+        "Rustic",
+        "Live Edge",
+        "Custom Seating"
+      ]
+    },
+    {
+      "id": "p4",
+      "title": "Heritage Restoration",
+      "category": "Restoration",
+      "location": "Songadh",
+      "image": "/projects/images/heritage_restoration.webp",
+      "description": "Complete restoration of a 40-year-old teak sofa set, returning it to its original glory.",
+      "tags": [
+        "Restoration",
+        "Antique",
+        "Teak"
+      ]
+    }
+  ]
+}

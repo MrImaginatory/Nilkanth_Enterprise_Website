@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "tag": "Connect With Us",
+    "title": "Let's Build Your Dream Space",
+    "sub": "Visit our showrooms or send us a message. We're here to bring your vision to life.",
+    "bgImage": "/contact/images/contact_hero.webp"
+  },
+  "contactInfo": {
+    "phones": [
+      "+91 99789 70039",
+      "+91 89809 18587"
+    ],
+    "emails": [
+      "contact@nilkanthenterprises.com",
+      "sales@neelwood.com"
+    ],
+    "hours": [
+      "Mon - Sat: 9:00 AM - 8:00 PM",
+      "Sun: Closed"
+    ]
+  },
+  "locations": [
+    {
+      "city": "Songadh",
+      "branch": "Songadh Branch",
+      "ownerName": "Harshil Dave",
+      "contactNumber": "+91 99789 70039",
+      "instagramLink": "https://www.instagram.com/nilkanth_enter_prise",
+      "whatsappLink": "https://wa.me/919978970039",
+      "facebookLink": "https://facebook.com/nilkanth_enterprises",
+      "address": "Nr. Sarthak Hospital Above PNB bank, Songadh-394670",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d379.4268909861918!2d73.56047891929076!3d21.16247656990399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdfd100399da1df%3A0xb76e5ae0335b3198!2sNilkanth%20Enterprise!5e1!3m2!1sen!2sin!4v1774437395819!5m2!1sen!2sin"
+    },
+    {
+      "city": "Vyara",
+      "branch": "Vyara Branch",
+      "ownerName": "Akash Mistry",
+      "contactNumber": "+91 89809 18587",
+      "instagramLink": "https://www.instagram.com/nilkanth_enter_prise",
+      "whatsappLink": "https://wa.me/918980918587",
+      "facebookLink": "https://facebook.com/nilkanth_enterprises",
+      "address": "Shri Villa, Nr. Sonarwadi, Mochiwad, Vyara-394645",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d819.9006987137044!2d73.39568363524215!3d21.109451781855224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be07f003d4ec71d%3A0x62f09d0daec35cd6!2sNilkanth%20Enterprise!5e1!3m2!1sen!2sin!4v1774437280832!5m2!1sen!2sin"
+    },
+    {
+      "city": "Vyara",
+      "branch": "Neel Wood Factory",
+      "ownerName": "Factory Team",
+      "contactNumber": "+91 89809 18587",
+      "instagramLink": "https://www.instagram.com/nilkanth_enter_prise",
+      "whatsappLink": "https://wa.me/918980918587",
+      "facebookLink": "https://facebook.com/nilwood_factory",
+      "address": "Nr. Hp Petrol pump, Opp KIA Showroom, Vyara-394645",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d460.12622872060683!2d73.41482844402337!3d21.118318231167294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be07f13bf8e0811%3A0x78e240a547acd8f5!2sNilwood!5e1!3m2!1sen!2sin!4v1775473534564!5m2!1sen!2sin"
+    },
+    {
+      "city": "Bardoli",
+      "branch": "Bardoli Showroom",
+      "ownerName": "Manoj Sonwane",
+      "contactNumber": "+91 99789 70039",
+      "instagramLink": "https://www.instagram.com/nilkanth_enterprise_bardoli/",
+      "whatsappLink": "https://wa.me/919978970039",
+      "facebookLink": "https://facebook.com/nilkanth_enterprises",
+      "address": "Lal Bahadur Shastri Rd, Bardoli-394601",
+      "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d819.8110149965547!2d73.1148326212802!3d21.125716495517203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0679149d31629%3A0x42f4ecf1fe92c9e7!2sNilkanth%20Enterprise!5e1!3m2!1sen!2sin!4v1774437462858!5m2!1sen!2sin"
+    }
+  ],
+  "brandNote": {
+    "title": "Artisan Quality Guaranteed",
+    "text": "Every piece is crafted in our Vyara factory using hand-selected timber and premium hardware."
+  }
+}

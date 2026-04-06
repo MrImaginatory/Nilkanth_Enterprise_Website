@@ -1,0 +1,346 @@
+{
+  "hero": {
+    "tag": "Factory Direct Artisan Furniture",
+    "title": "Timeless Collections",
+    "sub": "Hand-crafted in Vyara, delivered across Gujarat. Sustainable teak, premium finishes, and artisan care in every joint.",
+    "bgImage": "/products/images/products_hero.webp"
+  },
+  "products": [
+    {
+      "id": 1,
+      "name": "Bed 6*6.5ft (UV Finish)",
+      "category": "Bedroom",
+      "price": "₹45,000",
+      "rating": 4.9,
+      "image": "/products/images/product_bed_6x65.webp",
+      "description": "Premium king-size bed with a sleek UV finish. Built for comfort and long-lasting durability.",
+      "features": [
+        "King Size 6*6.5ft",
+        "UV Gloss Finish",
+        "Sturdy Frame"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Bed 5*6.5ft (UV Finish)",
+      "category": "Bedroom",
+      "price": "₹35,000",
+      "rating": 4.8,
+      "image": "/products/images/product_bed_5x65.webp",
+      "description": "Elegant queen-size bed with UV protection coating. Perfect for modern bedroom aesthetics.",
+      "features": [
+        "Queen Size 5*6.5ft",
+        "Durable Finish",
+        "Space Efficient"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "4 Door Wardrobe (Cupboard)",
+      "category": "Bedroom",
+      "price": "₹47,000",
+      "rating": 4.7,
+      "image": "/products/images/product_cupboard_4d.webp",
+      "description": "Extra-large 4-door wardrobe with ample hanging space and deep shelves for organized storage.",
+      "features": [
+        "4 Door Design",
+        "Internal Locker",
+        "Premium Hardware"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "4 Door Maliya (Storage)",
+      "category": "Bedroom",
+      "price": "₹22,000",
+      "rating": 4.6,
+      "image": "/products/images/product_maliya.webp",
+      "description": "Top-mounted storage units (Maliya) for a seamless ceiling-to-floor wardrobe look.",
+      "features": [
+        "Overhead Storage",
+        "UV Finish",
+        "Custom Fit"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Slider Wall Drop 6ft",
+      "category": "Bedroom",
+      "price": "₹65,000",
+      "rating": 4.8,
+      "image": "/products/images/product_slider.webp",
+      "description": "Premium sliding door wardrobe system, maximizing space and style in your bedroom.",
+      "features": [
+        "Sliding Mechanism",
+        "6ft Width",
+        "Soft Close"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Dressing Table 30in",
+      "category": "Bedroom",
+      "price": "₹28,000",
+      "rating": 4.9,
+      "image": "/products/images/product_dressing_30.webp",
+      "description": "Wide-mirror dressing table with dedicated storage for grooming and luxury display.",
+      "features": [
+        "30-inch Width",
+        "Large Mirror",
+        "Drawer Storage"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Sofa Set 18 Ft",
+      "category": "Living Room",
+      "price": "₹61,000",
+      "rating": 4.9,
+      "image": "/products/images/product_sofa_18ft.webp",
+      "description": "Expansive 18ft sofa set designed for grand living rooms and maximum family comfort.",
+      "features": [
+        "L-Shape Design",
+        "Premium Fabric",
+        "Ergonomic Support"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Dining Table",
+      "category": "Dining Room",
+      "price": "₹48,000",
+      "rating": 4.8,
+      "image": "/products/images/product_dining_main.webp",
+      "description": "Elegant dining centerpiece. Solid construction for durability and shared family meals.",
+      "features": [
+        "Solid Wood",
+        "6-8 Seater",
+        "Heirloom Quality"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Half TV Unit",
+      "category": "Living Room",
+      "price": "₹18,000",
+      "rating": 4.7,
+      "image": "/products/images/product_tv_unit.webp",
+      "description": "Minimalist wall-mounted/floor TV unit designed for modern media setups.",
+      "features": [
+        "Cable Management",
+        "UV Finish",
+        "Compact Design"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Mattress 6*6.5ft (Premium)",
+      "category": "Comfort",
+      "price": "₹12,000",
+      "rating": 5.0,
+      "image": "/products/images/product_mattress_king.webp",
+      "description": "High-density orthopedic mattress for superior spinal support and restful sleep.",
+      "features": [
+        "King Size",
+        "Orthopedic Foam",
+        "Quilted Cover"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Dulhan 3 Door Cupboard Heavy",
+      "category": "Bedroom",
+      "price": "₹32,000",
+      "rating": 4.9,
+      "image": "/products/images/product_cupboard_3d_dulhan.webp",
+      "description": "Premium 3-door wooden cupboard with traditional hand-carved details and heavy-duty construction.",
+      "features": [
+        "Dulhan Design",
+        "3-Door Storage",
+        "Integrated Locker"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Heavy 3 Door Cupboard",
+      "category": "Bedroom",
+      "price": "₹10,000",
+      "rating": 4.7,
+      "image": "/products/images/product_cupboard_3d_heavy.webp",
+      "description": "Durable and spacious 3-door cupboard with a modern minimalist design, perfect for daily use.",
+      "features": [
+        "Solid Wood",
+        "Spacious Interior",
+        "Safety Lock"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "PLB Cupboard 5ft",
+      "category": "Bedroom",
+      "price": "₹6,800",
+      "rating": 4.5,
+      "image": "/products/images/product_cupboard_plb_5ft.webp",
+      "description": "Compact and sturdy 5ft wide PLB (Plastic Laminated Board) cupboard, ideal for small spaces.",
+      "features": [
+        "PLB Construction",
+        "5ft Width",
+        "Space Saving"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Dressing Table 18in",
+      "category": "Bedroom",
+      "price": "₹12,000",
+      "rating": 4.6,
+      "image": "/products/images/product_dressing_18in.webp",
+      "description": "Compact vertical dressing table with a full-length mirror and single-drawer utility storage.",
+      "features": [
+        "18-inch Slim Design",
+        "Full Mirror",
+        "Teak Finish"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "L-Shaped Sofa 16ft",
+      "category": "Living Room",
+      "price": "₹45,000",
+      "rating": 4.9,
+      "image": "/products/images/product_sofa_16ft.webp",
+      "description": "Grand 16ft L-shaped sofa designed for luxury and maximum seating capacity in your hall.",
+      "features": [
+        "16ft Length",
+        "Premium Fabric",
+        "Ergonomic Cushions"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Marble Central Table",
+      "category": "Living Room",
+      "price": "₹8,000",
+      "rating": 4.8,
+      "image": "/products/images/product_table_marble.webp",
+      "description": "Sophisticated coffee table with a polished marble top and a sturdy wooden base.",
+      "features": [
+        "Real Marble Top",
+        "Polished Finish",
+        "Heavy Base"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Modern Central Table",
+      "category": "Living Room",
+      "price": "₹10,000",
+      "rating": 4.7,
+      "image": "/products/images/product_table_central_std.webp",
+      "description": "Contemporary wooden central table with a sleek glass insert and storage shelf.",
+      "features": [
+        "Glass Top Insert",
+        "Storage Shelf",
+        "Modern Design"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "4 Door Wardrobe (Standard)",
+      "category": "Bedroom",
+      "price": "₹40,000",
+      "rating": 4.7,
+      "image": "/products/images/product_cupboard_4d_std.webp",
+      "description": "Reliable 4-door wardrobe with ample vertical storage and a durable teak-finish exterior.",
+      "features": [
+        "4 Door Layout",
+        "Height Partition",
+        "Safety Locker"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "4 Door Wardrobe (Economy)",
+      "category": "Bedroom",
+      "price": "₹16,000",
+      "rating": 4.5,
+      "image": "/products/images/product_cupboard_4d_eco.webp",
+      "description": "Budget-friendly 4-door wardrobe made from high-quality particle board, perfect for rental spaces.",
+      "features": [
+        "Lightweight Design",
+        "4 Doors",
+        "Spacious Interior"
+      ]
+    },
+    {
+      "id": 20,
+      "name": "King Bed 6x6.5ft (Standard)",
+      "category": "Bedroom",
+      "price": "₹30,000",
+      "rating": 4.8,
+      "image": "/products/images/product_bed_6x65_std.webp",
+      "description": "High-durability solid wood king-size bed, balancing classic craftsmanship with modern trends.",
+      "features": [
+        "Teak Finish",
+        "King Size",
+        "Sturdy Frame"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "King Bed 6x6.5ft (Economy)",
+      "category": "Bedroom",
+      "price": "₹14,500",
+      "rating": 4.4,
+      "image": "/products/images/KingBed.webp",
+      "description": "Affordable and stylish king-size bed crafted from premium particle board for a clean look.",
+      "features": [
+        "Modern Minimalist",
+        "King Size",
+        "Lightweight"
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Queen Bed 5x6.5ft (Standard)",
+      "category": "Bedroom",
+      "price": "₹25,000",
+      "rating": 4.7,
+      "image": "/products/images/product_bed.webp",
+      "description": "Mid-range queen comfort. Sturdy build with a warm wood tone that fits any bedroom decor.",
+      "features": [
+        "Solid Wood Build",
+        "Queen Size",
+        "Easy Assembly"
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Queen Bed 5x6.5ft (Economy)",
+      "category": "Bedroom",
+      "price": "₹13,000",
+      "rating": 4.3,
+      "image": "/products/images/Queen Bed 5x6.5ft (Economy).webp",
+      "description": "Practical and modern queen-size bed designed for value without compromising style.",
+      "features": [
+        "Modern Oak Finish",
+        "Queen Size",
+        "Durable Board"
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Mattress 5x6.5ft (Standard)",
+      "category": "Comfort",
+      "price": "₹10,500",
+      "rating": 4.6,
+      "image": "/products/images/product_mattress_5x65.webp",
+      "description": "Comfortable 5-inch thick mattress with medium-firm support for a healthy posture.",
+      "features": [
+        "High-Density Foam",
+        "Soft Quilted Top",
+        "Queen Size"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+[
+  {
+    "id": "uv-bedroom-set",
+    "title": "UV BEDROOM SET",
+    "description": "A comprehensive home furnishing collection with premium UV finish for a cohesive, modern aesthetic across your living space.",
+    "categories": [
+      {
+        "name": "Bedroom Furniture",
+        "items": [
+          {
+            "name": "Bed 6x6.5ft",
+            "price": 45000
+          },
+          {
+            "name": "Bed 5x6.5ft",
+            "price": 35000
+          },
+          {
+            "name": "4 Door Cupboard",
+            "price": 47000
+          },
+          {
+            "name": "4 Door Maliya (Storage)",
+            "price": 22000
+          },
+          {
+            "name": "Slider wall drop 6ft",
+            "price": 65000
+          },
+          {
+            "name": "PLB Cupboard 5ft",
+            "price": 6800
+          },
+          {
+            "name": "Dressing table 30in",
+            "price": 28000
+          },
+          {
+            "name": "Dressing table 18in",
+            "price": 12000
+          }
+        ]
+      },
+      {
+        "name": "Living & Dining",
+        "items": [
+          {
+            "name": "Sofa set 18 Ft",
+            "price": 61000
+          },
+          {
+            "name": "Dining table",
+            "price": 48000
+          },
+          {
+            "name": "Half tv unit",
+            "price": 18000
+          },
+          {
+            "name": "Central Table",
+            "price": 10000
+          }
+        ]
+      },
+      {
+        "name": "Comfort & Bedding",
+        "items": [
+          {
+            "name": "Mattres 6x6.5ft",
+            "price": 12000
+          },
+          {
+            "name": "Mattres 5x6.5ft",
+            "price": 10500
+          },
+          {
+            "name": "Blanket Set (2pic)",
+            "price": 1200
+          },
+          {
+            "name": "Pillow 4pcs",
+            "price": 2000
+          }
+        ]
+      }
+    ],
+    "totalPrice": 423500,
+    "salePrice": 371000,
+    "image": "/assets/packages/bedroom-set.webp"
+  },
+  {
+    "id": "Kuber-2bhk-Package",
+    "title": "Kuber 2 BH (Bedroom & Hall) Package",
+    "description": "A heavy-duty, value-packed furniture bundle for a complete 2BHK experience, featuring high-capacity wardrobes and marble-top finishes.",
+    "categories": [
+      {
+        "name": "Bedroom Furniture",
+        "items": [
+          {
+            "name": "Bed 6x6.5",
+            "price": 30000
+          },
+          {
+            "name": "Mattress 6x6.5",
+            "price": 12000
+          },
+          {
+            "name": "4 Door Cupboard",
+            "price": 40000
+          },
+          {
+            "name": "Bed 5x6.5",
+            "price": 25000
+          },
+          {
+            "name": "Mattress 5x6.5",
+            "price": 8500
+          },
+          {
+            "name": "Dulhan 3 Door cupboard Heavy",
+            "price": 32000
+          },
+          {
+            "name": "Dressing Table",
+            "price": 15000
+          }
+        ]
+      },
+      {
+        "name": "Living & Hall",
+        "items": [
+          {
+            "name": "L shape Sofa 16 ft",
+            "price": 45000
+          },
+          {
+            "name": "Marble Central Table",
+            "price": 8000
+          }
+        ]
+      }
+    ],
+    "totalPrice": 215500,
+    "salePrice": 191000,
+    "image": "/assets/packages/kuber-2bh-set.webp"
+  },
+  {
+    "id": "particle-board-2bh-package",
+    "title": "Particle Board 2 BH (Bedroom & Hall) Package",
+    "description": "An affordable and modern 2BHK furniture solution crafted from high-quality particle board, perfect for style on a budget.",
+    "categories": [
+      {
+        "name": "Bedroom Furniture",
+        "items": [
+          {
+            "name": "Bed 6x6.5",
+            "price": 14500
+          },
+          {
+            "name": "Mattress 6x6.5",
+            "price": 12000
+          },
+          {
+            "name": "4 Door Cupboard",
+            "price": 16000
+          },
+          {
+            "name": "Bed 5x6.5",
+            "price": 13000
+          },
+          {
+            "name": "Mattress 5x6.5",
+            "price": 8500
+          },
+          {
+            "name": "3 Door Cupboard Heavy",
+            "price": 10000
+          },
+          {
+            "name": "Dressing Table",
+            "price": 7500
+          }
+        ]
+      },
+      {
+        "name": "Living & Hall",
+        "items": [
+          {
+            "name": "L shape Sofa 16 ft ",
+            "price": 45000
+          },
+          {
+            "name": "Marble Central Table",
+            "price": 8000
+          }
+        ]
+      }
+    ],
+    "totalPrice": 150500,
+    "salePrice": 131000,
+    "image": "/assets/packages/particle-board-2bh-set.webp"
+  }
+]

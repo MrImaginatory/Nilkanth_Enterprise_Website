@@ -1,75 +1,137 @@
-# React + TypeScript + Vite
+# Nilkanth Enterprises - Neel Wood Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A multi-page React landing page for **Nilkanth Enterprises**, a premium custom furniture manufacturer based in Gujarat, India. The brand operates under **Neel Wood**, their factory-direct furniture line.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This website serves as the digital presence for a furniture business specializing in:
+- **Custom furniture design and manufacturing**
+- **Sofa repair and restoration services**
+- **Commercial office solutions**
+- **Full home renovation services**
 
-## React Compiler
+The business has multiple showrooms across Gujarat (Songadh, Vyara, Bardoli) and operates their own factory in Vyara under the "Neel Wood" brand.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## Tech Stack
 
-Note: This will impact Vite dev & build performances.
+| Category | Technology |
+|----------|------------|
+| Framework | React 19 |
+| Language | TypeScript |
+| Build Tool | Vite |
+| Routing | React Router DOM |
+| Animations | Framer Motion |
+| SEO | React Helmet Async |
+| Icons | React Icons (FaFacebookF, FaInstagram, FaWhatsapp) |
+| Styling | CSS Modules |
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── components/           # Reusable UI components
+│   ├── Header/         # Navigation header with mobile menu
+│   ├── Hero/           # Hero section component
+│   ├── SEO.tsx         # SEO meta tags component
+│   └── ui/             # Basic UI components (Button, Container, Logo, etc.)
+├── pages/              # Page components
+│   ├── HomePage.tsx
+│   ├── ServicesPage.tsx
+│   ├── ProductsPage.tsx
+│   ├── PackagesPage.tsx
+│   ├── ProjectsPage.tsx
+│   ├── AboutPage.tsx
+│   └── ContactPage.tsx
+├── sections/            # Main content sections
+│   ├── Contact.tsx
+│   ├── FinalCTA.tsx
+│   ├── Footer.tsx
+│   ├── NeelWoodAdvantage.tsx
+│   ├── Packages.tsx
+│   ├── ProblemSolution.tsx
+│   ├── Products.tsx
+│   ├── Services.tsx
+│   └── WhyChooseUs.tsx
+├── data/
+│   └── content.ts      # Centralized content/SEO data
+├── hooks/
+│   └── useConfig.ts     # Configuration hook
+└── assets/              # Images and static assets
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Pages
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Home** (`/`) - Main landing page with all sections
+2. **Services** (`/services`) - Detailed services offered
+3. **Products** (`/products`) - Product catalog
+4. **Packages** (`/packages`) - Furniture packages
+5. **Projects** (`/projects`) - Portfolio of completed projects
+6. **About** (`/about`) - Business history and team
+7. **Contact** (`/contact`) - Contact form and locations
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Key Sections
+
+- **Hero** - Main call-to-action with factory-direct messaging
+- **ProblemSolution** - Addresses common furniture buying pain points
+- **NeelWoodAdvantage** - Unique selling propositions
+- **Services** - Four main services with detailed features
+- **Products** - Beds, cupboards, bedroom sets
+- **WhyChooseUs** - Trust-building section
+- **Contact** - Interactive contact form
+- **FinalCTA** - Closing call-to-action
+- **Footer** - Navigation, locations, social links
+
+## Business Information
+
+- **Company**: Nilkanth Enterprises
+- **Factory Brand**: Neel Wood
+- **Founded**: 2024
+- **Owners**: Harshil Dave, Akash Mistry, Manoj Sonwane
+
+### Locations
+
+| City | Branch Type | Address |
+|------|-------------|---------|
+| Songadh | Branch | Nr. Sarthak Hospital, Above PNB Bank |
+| Vyara | Branch | Shri Villa, Nr. Sonarwadi, Mochiwad |
+| Vyara | Factory | Nr. HP Petrol Pump, Opp. KIA Showroom |
+| Bardoli | Showroom | Lal Bahadur Shastri Rd, Above Vishal Dining |
+
+### Services Offered
+
+1. **Premium Sofa Repair & Cleaning** - Restoration and deep cleaning
+2. **Bespoke Furniture Design** - Custom furniture manufacturing
+3. **Office & Commercial Solutions** - Bulk commercial orders
+4. **Full Home Renovation** - Complete home furnishing
+
+## Running the Project
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Run linter
+npm run lint
+
+# Preview production build
+npm run preview
 ```
+
+## Design Features
+
+- Responsive design for all screen sizes
+- Smooth animations using Framer Motion
+- SEO-optimized with meta tags
+- Mobile-friendly navigation with hamburger menu
+- CSS Modules for scoped styling
+- Centralized content management via `content.ts`
+
+## License
+
+This project is private and owned by Nilkanth Enterprises.

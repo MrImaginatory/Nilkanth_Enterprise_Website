@@ -1,21 +1,31 @@
 import styles from './Button.module.css';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
-  size?: 'sm' | 'md' | 'lg';
+type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost';
+type ButtonSize = 'sm' | 'md' | 'lg';
+
+interface BaseButtonProps {
+  variant?: ButtonVariant;
+  size?: ButtonSize;
   children: React.ReactNode;
   className?: string;
   href?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({
+type ButtonProps<T extends React.ElementType> = BaseButtonProps & {
+  as?: T;
+} & React.ComponentPropsWithoutRef<T>;
+
+const Button = <T extends React.ElementType = 'button'>({
   variant = 'primary',
   size = 'md',
   children,
   className = '',
   href,
+  as,
   ...props
-}) => {
+}: ButtonProps<T>) => {
+  const Component = as || (href ? 'a' : 'button');
+  
   const buttonClasses = [
     styles.button,
     styles[variant],
@@ -23,7 +33,7 @@ const Button: React.FC<ButtonProps> = ({
     className
   ].filter(Boolean).join(' ');
 
-  if (href) {
+  if (href && !as) {
     return (
       <a
         href={href}
@@ -38,12 +48,12 @@ const Button: React.FC<ButtonProps> = ({
   }
 
   return (
-    <button
+    <Component
       className={buttonClasses}
       {...props}
     >
       {children}
-    </button>
+    </Component>
   );
 };
 

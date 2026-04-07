@@ -42,6 +42,15 @@ const ContactPage: React.FC = () => {
   const [data, setData] = useState<ContactData | null>(null);
   const [loading, setLoading] = useState(true);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    serviceArea: 'Direct Purchase (Ready-made)',
+    message: ''
+  });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     fetch('/data/contact.json')
@@ -56,9 +65,87 @@ const ContactPage: React.FC = () => {
       });
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const validate = () => {
+    const newErrors: Record<string, string> = {};
+    
+    if (!/^[a-zA-Z\s]{1,265}$/.test(formData.name)) {
+      newErrors.name = "Please enter a valid name (letters and spaces only)";
+    }
+    
+    if (!/^[6-9]\d{9}$/.test(formData.phone)) {
+      newErrors.phone = "Please enter a valid 10-digit phone number starting with 6-9";
+    }
+    
+    if (formData.email && !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+    
+    if (!/^[a-zA-Z\s()/\-]{1,265}$/.test(formData.serviceArea)) {
+      newErrors.serviceArea = "Invalid service area selected";
+    }
+    
+    if (!/^[a-zA-Z0-9\s.,!?'"()\-]{1,512}$/.test(formData.message)) {
+      newErrors.message = "Message contains invalid characters or is too long";
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    // Clear error for this field
+    if (errors[name]) {
+      setErrors(prev => {
+        const next = { ...prev };
+        delete next[name];
+        return next;
+      });
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    
+    if (!validate()) return;
+    
+    setIsSubmitting(true);
+    
+    const GoogleFormUrl = import.meta.env.VITE_API_GOOGLE_FORM_UNSHORTEN_LINK;
+    if (!GoogleFormUrl) {
+      console.error("Google Form URL not found in environment variables");
+      alert("Something went wrong. Please try again later.");
+      setIsSubmitting(false);
+      return;
+    }
+    
+    // Transform viewform URL to formResponse and strip query params
+    const submissionUrl = GoogleFormUrl.split('?')[0].replace('/viewform', '/formResponse');
+    
+    const params = new URLSearchParams();
+    params.append('entry.1126050585', formData.name);
+    params.append('entry.1867982687', formData.phone);
+    if (formData.email) params.append('entry.397973429', formData.email);
+    params.append('entry.375096659', formData.serviceArea);
+    params.append('entry.22648990', formData.message);
+
+    try {
+      await fetch(submissionUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: params.toString()
+      });
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error("Form submission failed:", error);
+      alert("Submission failed. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (loading || !data) {
@@ -107,32 +194,80 @@ const ContactPage: React.FC = () => {
                     <div className={styles.inputGroup}>
                       <div className={styles.formField}>
                         <label>Name</label>
-                        <input type="text" placeholder="Your Name" required />
+                        <input 
+                          name="name"
+                          type="text" 
+                          placeholder="Your Name" 
+                          value={formData.name}
+                          onChange={handleChange}
+                          className={errors.name ? styles.inputError : ''}
+                          required 
+                        />
+                        {errors.name && <span className={styles.errorText}>{errors.name}</span>}
                       </div>
                       <div className={styles.formField}>
                         <label>Phone</label>
-                        <input type="tel" placeholder="+91 00000 00000" required />
+                        <input 
+                          name="phone"
+                          type="tel" 
+                          placeholder="+91 00000 00000" 
+                          value={formData.phone}
+                          onChange={handleChange}
+                          className={errors.phone ? styles.inputError : ''}
+                          required 
+                        />
+                        {errors.phone && <span className={styles.errorText}>{errors.phone}</span>}
                       </div>
                     </div>
                     <div className={styles.formField}>
                       <label>Email (Optional)</label>
-                      <input type="email" placeholder="your@email.com" />
+                      <input 
+                        name="email"
+                        type="email" 
+                        placeholder="your@email.com" 
+                        value={formData.email}
+                        onChange={handleChange}
+                        className={errors.email ? styles.inputError : ''}
+                      />
+                      {errors.email && <span className={styles.errorText}>{errors.email}</span>}
                     </div>
                     <div className={styles.formField}>
                       <label>Service Area</label>
-                      <select>
+                      <select 
+                        name="serviceArea"
+                        value={formData.serviceArea}
+                        onChange={handleChange}
+                      >
                         <option>Direct Purchase (Ready-made)</option>
                         <option>Custom Furniture Design</option>
                         <option>Full Home Renovation</option>
                         <option>Commercial/Office Project</option>
                         <option>Restoration/Repair</option>
                       </select>
+                      {errors.serviceArea && <span className={styles.errorText}>{errors.serviceArea}</span>}
                     </div>
                     <div className={styles.formField}>
                       <label>Your Message</label>
-                      <textarea rows={5} placeholder="Tell us what you're looking for..."></textarea>
+                      <textarea 
+                        name="message"
+                        rows={5} 
+                        placeholder="Tell us what you're looking for..."
+                        value={formData.message}
+                        onChange={handleChange}
+                        className={errors.message ? styles.inputError : ''}
+                        required
+                      ></textarea>
+                      {errors.message && <span className={styles.errorText}>{errors.message}</span>}
                     </div>
-                    <Button type="submit" variant="primary" size="lg" className="w-full">Submit Request</Button>
+                    <Button 
+                      type="submit" 
+                      variant="primary" 
+                      size="lg" 
+                      className="w-full"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? 'Submitting...' : 'Submit Request'}
+                    </Button>
                   </form>
                 </div>
               ) : (

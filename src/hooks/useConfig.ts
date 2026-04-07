@@ -26,7 +26,7 @@ const DEFAULT_CONFIG: ConfigData = {
   business: {
     mobile: "+91 99789 70039",
     whatsapp: "https://wa.me/919978970550",
-    facebook: "#",
+    facebook: "https://www.facebook.com/harshil.dave.56829",
     instagram: "https://www.instagram.com/nilkanth_enter_prise",
     ownerName: "Harshil Dave",
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119106.31484218764!2d73.49122396347185!3d21.09172283995679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04fbc95763cc7%3A0xe545c850239b9789!2sSongadh%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1711438000000!5m2!1sen!2sin",

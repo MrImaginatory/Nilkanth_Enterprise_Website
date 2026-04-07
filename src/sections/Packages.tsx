@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Container, Section, Button } from '../components/ui';
+import { useConfig } from '../hooks/useConfig';
+import { Link } from 'react-router-dom';
 import { content } from '../data/content';
 import styles from './styles/Packages.module.css';
 
@@ -25,6 +27,7 @@ interface FurniturePackage {
 }
 
 const Packages: React.FC = () => {
+  const { config } = useConfig();
   const [packages, setPackages] = useState<FurniturePackage[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -191,7 +194,7 @@ const Packages: React.FC = () => {
                 </div>
 
                 <div className={styles.actions}>
-                  <Button variant="primary" size="lg" className={styles.ctaBtn}>
+                  <Button as={Link} to={config.links.freeQuote} variant="primary" size="lg" className={styles.ctaBtn}>
                     Book This Package
                   </Button>
                 </div>

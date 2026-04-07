@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { Container, Logo } from '../components/ui';
+import { Link } from 'react-router-dom';
 import { content } from '../data/content';
 import { useConfig } from '../hooks/useConfig';
 import styles from './styles/Footer.module.css';
@@ -37,10 +38,10 @@ const Footer: React.FC = () => {
             <ul className={styles.linksList}>
               {content.business.navigation.map(link => (
                 <li key={link.name}>
-                  <a href={link.href} className={styles.footerLink}>
+                  <Link to={link.href} className={styles.footerLink}>
                     <span className={styles.linkDot}></span>
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

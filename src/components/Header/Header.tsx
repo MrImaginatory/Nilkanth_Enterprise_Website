@@ -56,11 +56,11 @@ const Header: React.FC = () => {
                 <HiPhone className="w-4 h-4 text-warm-amber" />
                 <span className={styles.phoneNumber}>{config.business.mobile}</span>
               </div>
-              <a href={config.links.freeQuote}>
+              <Link to={config.links.freeQuote}>
                 <Button variant="primary" size="sm" className="shadow-none">
                   Get Quote
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
 

@@ -1,4 +1,5 @@
 import { FaWhatsapp } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import { Button, Container, Section } from '../components/ui';
 import { useConfig } from '../hooks/useConfig';
 import styles from './styles/FinalCTA.module.css';
@@ -27,11 +28,12 @@ const FinalCTA: React.FC = () => {
 
           <div className={styles.btnContainer}>
             <Button 
+              as={Link}
               size="lg" 
               className={styles.primaryBtn}
-              href={config.links.freeQuote}
+              to={config.links.freeQuote}
             >
-              Get Your Free Quote
+              Get Free Quote
             </Button>
             <Button 
               variant="outline" 

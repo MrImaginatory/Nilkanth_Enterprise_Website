@@ -4,6 +4,8 @@ import { Container, Section, Button } from '../components/ui';
 import Header from '../components/Header/Header';
 import Footer from '../sections/Footer';
 import SEO from '../components/SEO';
+import { useConfig } from '../hooks/useConfig';
+import { Link } from 'react-router-dom';
 import { content } from '../data/content';
 import * as Icons from 'react-icons/hi2';
 import styles from './styles/ServicesPage.module.css';
@@ -34,6 +36,7 @@ interface ServiceData {
 }
 
 const ServicesPage: React.FC = () => {
+  const { config } = useConfig();
   const [data, setData] = useState<ServiceData | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -164,8 +167,8 @@ const ServicesPage: React.FC = () => {
               <p className={styles.trustDesc}>{data.trustBanner.desc}</p>
             </div>
             <div className={styles.trustActions}>
-              <Button variant="primary" size="lg" className={styles.bannerBtn}>{data.trustBanner.primaryCTA}</Button>
-              <Button variant="outline" size="lg" className={styles.bannerBtnWhite}>{data.trustBanner.secondaryCTA}</Button>
+              <Button as={Link} to={config.links.freeQuote} variant="primary" size="lg" className={styles.bannerBtn}>{data.trustBanner.primaryCTA}</Button>
+              <Button as="a" href={config.business.whatsapp} target="_blank" rel="noopener noreferrer" variant="outline" size="lg" className={styles.bannerBtnWhite}>{data.trustBanner.secondaryCTA}</Button>
             </div>
           </div>
         </Container>

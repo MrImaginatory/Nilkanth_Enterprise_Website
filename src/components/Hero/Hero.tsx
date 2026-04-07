@@ -3,6 +3,7 @@ import { HiCheckCircle } from 'react-icons/hi2';
 import { FaWhatsapp } from 'react-icons/fa';
 import { Button } from '../ui';
 import { content } from '../../data/content';
+import { Link } from 'react-router-dom';
 import { useConfig } from '../../hooks/useConfig';
 import heroBg from '../../assets/hero_full_bg.png';
 import styles from './Hero.module.css';
@@ -50,14 +51,14 @@ const Hero: React.FC = () => {
 
           {/* CTAs */}
           <div className={styles.ctas}>
-            <a href={config.links.freeQuote}>
-              <Button 
-                size="lg" 
-                className={styles.primaryBtn}
-              >
-                Get Your Free Quote
-              </Button>
-            </a>
+            <Button 
+              as={Link}
+              to={config.links.freeQuote}
+              size="lg" 
+              className={styles.primaryBtn}
+            >
+              Get Free Quote
+            </Button>
             <a href={config.business.whatsapp} target="_blank" rel="noopener noreferrer">
               <Button 
                 variant="outline" 

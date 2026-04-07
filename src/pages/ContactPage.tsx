@@ -65,14 +65,24 @@ const ContactPage: React.FC = () => {
       });
   }, []);
 
+  const formatPhoneNumber = (value: string) => {
+    const cleaned = value.replace(/\D/g, '').substring(0, 10);
+    const match = cleaned.match(/^(\d{5})(\d{0,5})$/);
+    if (match) {
+      return !match[2] ? match[1] : `${match[1]} ${match[2]}`;
+    }
+    return cleaned;
+  };
+
   const validate = () => {
     const newErrors: Record<string, string> = {};
+    const rawPhone = formData.phone.replace(/\s/g, '');
     
     if (!/^[a-zA-Z\s]{1,265}$/.test(formData.name)) {
       newErrors.name = "Please enter a valid name (letters and spaces only)";
     }
     
-    if (!/^[6-9]\d{9}$/.test(formData.phone)) {
+    if (!/^[6-9]\d{9}$/.test(rawPhone)) {
       newErrors.phone = "Please enter a valid 10-digit phone number starting with 6-9";
     }
     
@@ -94,7 +104,14 @@ const ContactPage: React.FC = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    
+    if (name === 'phone') {
+      const formatted = formatPhoneNumber(value);
+      setFormData(prev => ({ ...prev, [name]: formatted }));
+    } else {
+      setFormData(prev => ({ ...prev, [name]: value }));
+    }
+
     // Clear error for this field
     if (errors[name]) {
       setErrors(prev => {
@@ -125,7 +142,7 @@ const ContactPage: React.FC = () => {
     
     const params = new URLSearchParams();
     params.append('entry.1126050585', formData.name);
-    params.append('entry.1867982687', formData.phone);
+    params.append('entry.1867982687', formData.phone.replace(/\s/g, ''));
     if (formData.email) params.append('entry.397973429', formData.email);
     params.append('entry.375096659', formData.serviceArea);
     params.append('entry.22648990', formData.message);

@@ -152,5 +152,8 @@ export const content = {
       description: "Visit our showrooms or technical workshop. Get in touch with our experts for custom quotes and expert furniture consultation.",
       keywords: "furniture showroom, contact Nilkanth, Vyara workshop, Songadh furniture office"
     }
+  },
+  settings: {
+    showPrice: false,
   }
 };

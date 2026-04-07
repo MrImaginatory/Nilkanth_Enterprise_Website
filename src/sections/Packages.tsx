@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Container, Section, Button } from '../components/ui';
+import { content } from '../data/content';
 import styles from './styles/Packages.module.css';
 
 interface PackageItem {
@@ -129,13 +130,15 @@ const Packages: React.FC = () => {
             >
               <div className={styles.imageSection}>
                 <img src={currentPackage.image} alt={currentPackage.title} className={styles.image} />
-                <div className={styles.priceTag}>
-                  <span className={styles.discount}>
-                    save ₹{(currentPackage.totalPrice - currentPackage.salePrice).toLocaleString()}
-                  </span>
-                  <div className={styles.salePrice}>₹{currentPackage.salePrice.toLocaleString()}</div>
-                  <div className={styles.originalPrice}>₹{currentPackage.totalPrice.toLocaleString()}</div>
-                </div>
+                {content.settings.showPrice && (
+                  <div className={styles.priceTag}>
+                    <span className={styles.discount}>
+                      save ₹{(currentPackage.totalPrice - currentPackage.salePrice).toLocaleString()}
+                    </span>
+                    <div className={styles.salePrice}>₹{currentPackage.salePrice.toLocaleString()}</div>
+                    <div className={styles.originalPrice}>₹{currentPackage.totalPrice.toLocaleString()}</div>
+                  </div>
+                )}
               </div>
 
               <div className={styles.detailsSection}>
@@ -151,14 +154,14 @@ const Packages: React.FC = () => {
                           <thead>
                             <tr>
                               <th>Item</th>
-                              <th className={styles.priceCol}>Price (₹)</th>
+                              {content.settings.showPrice && <th className={styles.priceCol}>Price (₹)</th>}
                             </tr>
                           </thead>
                           <tbody>
                             {category.items.map((item, idx) => (
                               <tr key={idx}>
                                 <td>{item.name}</td>
-                                <td className={styles.priceCol}>₹{item.price.toLocaleString()}</td>
+                                {content.settings.showPrice && <td className={styles.priceCol}>₹{item.price.toLocaleString()}</td>}
                               </tr>
                             ))}
                           </tbody>
@@ -167,22 +170,24 @@ const Packages: React.FC = () => {
                     </div>
                   ))}
                   
-                  <div className={styles.summaryBlock}>
-                    <div className={styles.summaryRow}>
-                      <span>Total Value:</span>
-                      <span className={styles.totalValue}>₹{currentPackage.totalPrice.toLocaleString()}</span>
+                  {content.settings.showPrice && (
+                    <div className={styles.summaryBlock}>
+                      <div className={styles.summaryRow}>
+                        <span>Total Value:</span>
+                        <span className={styles.totalValue}>₹{currentPackage.totalPrice.toLocaleString()}</span>
+                      </div>
+                      <div className={styles.summaryRow}>
+                        <span>Package Discount:</span>
+                        <span className={styles.discountValue}>
+                          -₹{(currentPackage.totalPrice - currentPackage.salePrice).toLocaleString()}
+                        </span>
+                      </div>
+                      <div className={`${styles.summaryRow} ${styles.finalPriceRow}`}>
+                        <span>Special Offer Price:</span>
+                        <span className={styles.salePriceValue}>₹{currentPackage.salePrice.toLocaleString()}</span>
+                      </div>
                     </div>
-                    <div className={styles.summaryRow}>
-                      <span>Package Discount:</span>
-                      <span className={styles.discountValue}>
-                        -₹{(currentPackage.totalPrice - currentPackage.salePrice).toLocaleString()}
-                      </span>
-                    </div>
-                    <div className={`${styles.summaryRow} ${styles.finalPriceRow}`}>
-                      <span>Special Offer Price:</span>
-                      <span className={styles.salePriceValue}>₹{currentPackage.salePrice.toLocaleString()}</span>
-                    </div>
-                  </div>
+                  )}
                 </div>
 
                 <div className={styles.actions}>

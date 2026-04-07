@@ -76,7 +76,7 @@ const ProductsPage: React.FC = () => {
       <SEO {...content.seo.products} />
       <Header />
 
-      <section 
+      <section
         className={styles.hero}
         style={{ backgroundImage: `linear-gradient(rgba(10, 8, 5, 0.7), rgba(10, 8, 5, 0.8)), url(${data.hero.bgImage})` }}
       >
@@ -160,11 +160,13 @@ const ProductsPage: React.FC = () => {
                         </div>
                       </div>
 
-                      <div className={styles.cardFooter}>
-                        <div className={styles.priceInfo}>
-                          <span className={styles.priceLabel}>Factory Price</span>
-                          <span className={styles.priceValue}>{product.price}</span>
-                        </div>
+                      <div className={`${styles.cardFooter} ${!content.settings.showPrice ? styles.noPrice : ''}`}>
+                        {content.settings.showPrice && (
+                          <div className={styles.priceInfo}>
+                            <span className={styles.priceLabel}>Factory Price</span>
+                            <span className={styles.priceValue}>{product.price}</span>
+                          </div>
+                        )}
                         <Button variant="primary" size="md" className={styles.detailsBtn}>Request Quote</Button>
                       </div>
                     </div>

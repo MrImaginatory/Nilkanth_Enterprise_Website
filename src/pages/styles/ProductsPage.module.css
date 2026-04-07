@@ -216,6 +216,10 @@
 
 .cardInfo {
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 18rem;
 }
 
 .productName {
@@ -269,6 +273,11 @@
   padding-top: 1.5rem;
   border-top: 1px solid rgba(230, 221, 210, 0.3);
   margin-top: auto;
+  min-height: 4.5rem;
+}
+
+.noPrice .detailsBtn {
+  width: 100%;
 }
 
 .detailsBtn {

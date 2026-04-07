@@ -1,4 +1,5 @@
-.loading, .error {
+.loading,
+.error {
   text-align: center;
   padding: 4rem 1rem;
   font-size: 1.25rem;
@@ -41,7 +42,7 @@
 
 .packageSwitcher {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 1.5rem;
   margin-bottom: 3rem;
   overflow-x: auto;
@@ -273,7 +274,7 @@
   .packageCard {
     gap: 0;
   }
-  
+
   .imageSection {
     aspect-ratio: 16/9;
   }
@@ -283,21 +284,21 @@
   .title {
     font-size: 2.25rem;
   }
-  
+
   .detailsSection {
     padding: 2rem 1.5rem;
   }
-  
+
   .imageSection {
     aspect-ratio: 4/3;
   }
-  
+
   .priceTag {
     padding: 1rem 1.5rem;
     bottom: 1rem;
     right: 1rem;
   }
-  
+
   .categoryName {
     font-size: 1rem;
   }

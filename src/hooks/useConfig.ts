@@ -25,7 +25,7 @@ export interface ConfigData {
 const DEFAULT_CONFIG: ConfigData = {
   business: {
     mobile: "+91 99789 70039",
-    whatsapp: "https://wa.me/919978970039",
+    whatsapp: "https://wa.me/919978970550",
     facebook: "#",
     instagram: "https://www.instagram.com/nilkanth_enter_prise",
     ownerName: "Harshil Dave",
@@ -33,8 +33,8 @@ const DEFAULT_CONFIG: ConfigData = {
     locations: []
   },
   links: {
-    talkToExperts: "https://wa.me/919978970039",
-    freeQuote: "https://wa.me/919978970039"
+    talkToExperts: "https://wa.me/919978970550",
+    freeQuote: "https://wa.me/919978970550"
   }
 };
 

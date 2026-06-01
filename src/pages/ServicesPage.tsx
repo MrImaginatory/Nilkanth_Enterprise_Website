@@ -149,7 +149,7 @@ const ServicesPage: React.FC = () => {
                   </div>
 
                   <div className={styles.serviceCTA}>
-                    <Button variant="outline" size="lg">Learn More About {service.title.split(' ')[0]}</Button>
+                    <Button variant="outline" size="lg" aria-label={`Learn more about ${service.title}`}>Learn More About {service.title.split(' ')[0]}</Button>
                   </div>
                 </div>
               </motion.div>

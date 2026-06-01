@@ -19,6 +19,9 @@ const Hero: React.FC = () => {
           src={heroBg}
           alt="Luxury Artisan Interior"
           className={styles.bgImage}
+          fetchPriority="high"
+          loading="eager"
+          decoding="sync"
         />
         {/* Stronger Gradient Scrim for Text Readability */}
         <div className={styles.scrim}></div>

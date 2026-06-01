@@ -59,6 +59,7 @@ const Services: React.FC = () => {
                 <Link
                   to={`/services#${service.id}`}
                   className={styles.ctaLink}
+                  aria-label={`Learn more about ${service.title}`}
                 >
                   Learn More
                   <HiArrowRight className={styles.arrowIcon} />

@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div className={styles.linksSection}>
-            <h4 className={styles.linkTitle}>Quick Links</h4>
+            <h3 className={styles.linkTitle}>Quick Links</h3>
             <ul className={styles.linksList}>
               {content.business.navigation.map(link => (
                 <li key={link.name}>
@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
 
           {/* Locations */}
           <div className={styles.linksSection}>
-            <h4 className={styles.linkTitle}>Our Branches</h4>
+            <h3 className={styles.linkTitle}>Our Branches</h3>
             <ul className={styles.linksList}>
               {content.business.locations.map((loc, index) => (
                 <li key={loc.branch || index} className={styles.locationItem}>
@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
 
           {/* Contact & Social */}
           <div className={styles.linksSection}>
-            <h4 className={styles.linkTitle}>Get In Touch</h4>
+            <h3 className={styles.linkTitle}>Get In Touch</h3>
             <div className={styles.contactInfo}>
               <a href={`tel:${config.business.mobile.replace(/\s+/g, '')}`} className={styles.phoneLink}>
                 {config.business.mobile}

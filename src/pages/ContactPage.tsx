@@ -254,6 +254,7 @@ const ContactPage: React.FC = () => {
                         name="serviceArea"
                         value={formData.serviceArea}
                         onChange={handleChange}
+                        aria-label="Service Area"
                       >
                         <option>Direct Purchase (Ready-made)</option>
                         <option>Custom Furniture Design</option>

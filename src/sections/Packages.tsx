@@ -151,7 +151,7 @@ const Packages: React.FC = () => {
                 <div className={styles.categoriesContainer}>
                   {currentPackage.categories.map((category, catIdx) => (
                     <div key={catIdx} className={styles.categoryBlock}>
-                      <h4 className={styles.categoryName}>{category.name}</h4>
+                      <h3 className={styles.categoryName}>{category.name}</h3>
                       <div className={styles.itemsTableWrapper}>
                         <table className={styles.itemsTable}>
                           <thead>

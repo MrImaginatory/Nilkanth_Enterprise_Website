@@ -84,7 +84,7 @@
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: var(--color-warm-amber);
+  color: var(--color-warm-amber-dark);
   font-weight: 700;
 }
 
@@ -137,7 +137,7 @@
 .footerText {
   text-align: center;
   font-size: 0.875rem;
-  color: var(--color-neutral-500);
+  color: var(--color-neutral-700);
   margin-top: 1rem;
   font-weight: 500;
 }

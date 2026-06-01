@@ -54,7 +54,7 @@
 .problemLabel {
   font-size: 0.875rem;
   font-weight: 700;
-  color: var(--color-neutral-400);
+  color: var(--color-neutral-600);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   text-decoration: line-through;
@@ -67,7 +67,7 @@
 .problemTitle {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--color-neutral-400);
+  color: var(--color-neutral-600);
   text-decoration: line-through;
 }
 

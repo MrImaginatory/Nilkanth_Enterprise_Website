@@ -172,6 +172,7 @@ const Contact: React.FC = () => {
                         value={formData.interest}
                         onChange={handleChange}
                         className={styles.select}
+                        aria-label="Service of Interest"
                       >
                         <option>Custom Sofa Design</option>
                         <option>Bespoke Bedroom Furniture</option>

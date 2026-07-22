@@ -1,0 +1,36 @@
+.btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--color-wood-brown);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.2s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+.btn:hover {
+  background-color: var(--color-wood-brown-dark);
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}

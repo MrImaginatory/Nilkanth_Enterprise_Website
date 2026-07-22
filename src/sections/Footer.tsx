@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { Container, Logo } from '../components/ui';
 import { Link } from 'react-router-dom';
@@ -10,8 +10,75 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   const { config } = useConfig();
 
+  const [svgHtml, setSvgHtml] = useState<string>('');
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const svgRef = useRef<HTMLDivElement>(null);
+  const footerRef = useRef<HTMLElement>(null);
+
+  // Fetch SVG, strip inline dimensions, and remove padding for full-width display
+  useEffect(() => {
+    fetch('/NilkanthEnterprise.svg')
+      .then((res) => res.text())
+      .then((text) => {
+        const cleaned = text
+          .replace(/width="[^"]*"/, '')
+          .replace(/height="[^"]*"/, '')
+          .replace(/viewBox="[^"]*"/, 'viewBox="0 0 685.3 103.975"')
+          .replace('<svg ', '<svg preserveAspectRatio="none" ');
+        setSvgHtml(cleaned);
+      });
+  }, []);
+
+  // Intersection Observer to trigger animation on scroll
+  useEffect(() => {
+    if (hasAnimated || !svgHtml) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+
+          // Wait for DOM to render the SVG
+          setTimeout(() => {
+            const container = svgRef.current;
+            if (!container) return;
+
+            const path = container.querySelector('path');
+            if (!path) return;
+
+            const length = path.getTotalLength();
+
+            path.style.strokeDasharray = `${length}`;
+            path.style.strokeDashoffset = `${length}`;
+            path.style.fill = 'transparent';
+            path.style.transition = 'none';
+
+            requestAnimationFrame(() => {
+              requestAnimationFrame(() => {
+                path.style.transition = `
+                  stroke-dashoffset 1.6s cubic-bezier(0.65, 0, 0.35, 1) 0.15s,
+                  fill 0.9s ease-in-out 1.5s
+                `;
+                path.style.strokeDashoffset = '0';
+                path.style.fill = 'white';
+              });
+            });
+          }, 100);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    const el = footerRef.current;
+    if (el) observer.observe(el);
+
+    return () => {
+      if (el) observer.unobserve(el);
+    };
+  }, [svgHtml, hasAnimated]);
+
   return (
-    <footer className={styles.footer}>
+    <footer ref={footerRef} className={styles.footer}>
       <Container>
         <div className={styles.grid}>
           {/* Brand Column */}
@@ -82,6 +149,15 @@ const Footer: React.FC = () => {
               </a>
             </div>
           </div>
+        </div>
+
+        {/* Footer Logo Animation */}
+        <div className={styles.footerLogoSection}>
+          <div
+            ref={svgRef}
+            className={styles.footerLogoSvg}
+            dangerouslySetInnerHTML={{ __html: svgHtml }}
+          />
         </div>
 
         {/* Bottom Bar */}

@@ -4,7 +4,7 @@
 
 .hero {
   background-color: var(--color-wood-brown-dark);
-  background-image: linear-gradient(rgba(10, 8, 5, 0.7), rgba(10, 8, 5, 0.7)), url('/assets/about_hero.webp');
+  background-image: linear-gradient(rgba(10, 8, 5, 0.7), rgba(10, 8, 5, 0.7)), url('/about/images/about_hero.webp');
   background-size: cover;
   background-position: center;
   color: white;

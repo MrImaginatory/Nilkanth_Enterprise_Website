@@ -226,22 +226,20 @@
   color: var(--color-cream);
 }
 
-.footerLogoSection {
+/* .footerLogoSection {
   padding: 3rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   margin-bottom: 2.5rem;
-  margin-left: -2rem;
-  margin-right: -2rem;
-  width: calc(100% + 4rem);
-}
+} */
 
 .footerLogoSvg {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .footerLogoSvg svg {
   width: 100%;
   height: auto;
   display: block;
-  max-width: none;
 }

@@ -15,16 +15,14 @@ const Footer: React.FC = () => {
   const svgRef = useRef<HTMLDivElement>(null);
   const footerRef = useRef<HTMLElement>(null);
 
-  // Fetch SVG, strip inline dimensions, and remove padding for full-width display
+  // Fetch the footer-specific SVG, strip inline dimensions so CSS controls sizing
   useEffect(() => {
-    fetch('/NilkanthEnterprise.svg')
+    fetch('/NilkanthEnterpriseFooter.svg')
       .then((res) => res.text())
       .then((text) => {
         const cleaned = text
           .replace(/width="[^"]*"/, '')
-          .replace(/height="[^"]*"/, '')
-          .replace(/viewBox="[^"]*"/, 'viewBox="0 0 685.3 103.975"')
-          .replace('<svg ', '<svg preserveAspectRatio="none" ');
+          .replace(/height="[^"]*"/, '');
         setSvgHtml(cleaned);
       });
   }, []);
@@ -46,6 +44,10 @@ const Footer: React.FC = () => {
             const path = container.querySelector('path');
             if (!path) return;
 
+            // Read the native fill color from the parent <g> element
+            const group = container.querySelector('g');
+            const nativeFill = group?.getAttribute('fill') || '#d18578';
+
             const length = path.getTotalLength();
 
             path.style.strokeDasharray = `${length}`;
@@ -60,7 +62,7 @@ const Footer: React.FC = () => {
                   fill 0.9s ease-in-out 1.5s
                 `;
                 path.style.strokeDashoffset = '0';
-                path.style.fill = 'white';
+                path.style.fill = nativeFill;
               });
             });
           }, 100);
